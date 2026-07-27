@@ -1,0 +1,54 @@
+{
+    "name": "uuid-tool",
+    "version": "1.0.0",
+    "description": "Small UUID generator desktop widget",
+    "main": "main.js",
+    "scripts": {
+        "start": "electron .",
+        "build": "electron-builder"
+    },
+    "devDependencies": {
+        "electron": "^37.10.3",
+        "electron-builder": "^26.15.3"
+    },
+    "build": {
+        "appId": "com.uuidtool.app",
+        "productName": "UUID Tool",
+        "win": {
+            "icon": "icon.ico",
+            "target": [
+                {
+                    "target": "nsis",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ]
+        },
+        "mac": {
+            "icon": "icon.icns",
+            "target": [
+                {
+                    "target": "dmg",
+                    "arch": [
+                        "x64",
+                        "arm64"
+                    ]
+                }
+            ],
+            "category": "public.app-category.utilities"
+        },
+        "linux": {
+            "icon": "icons",
+            "target": [
+                {
+                    "target": "AppImage",
+                    "arch": [
+                        "x64"
+                    ]
+                }
+            ],
+            "category": "Utility"
+        }
+    }
+}
