@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="box">
+        <div class="header">
+            <button onClick="closeApp()" class="closeButton">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0,0,10,10" class="closeImage">
+                    <path d="M0,1 0,0 1,0 10,9 10,10 9,10z" fill="currentColor" />
+                    <path d="M10,1 10,0 9,0 0,9 0,10 1,10z" fill="currentColor" />
+                </svg>
+            </button>
+        </div>
+        <div class="main">
+            <h1 class="title">UUID TOOL</h1>
+            <code id="uuid" class="uuid"></code>
+            <div id="copy"></div>
+            <button id="generate">GENERATE</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
