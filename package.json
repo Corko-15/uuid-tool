@@ -1,27 +1,22 @@
 {
     "name": "uuid-tool",
-    "version": "1.0.0",
+    "version": "1.0.1",
+    "license": "MIT",
     "description": "Small UUID generator desktop widget",
     "main": "main.js",
     "scripts": {
         "start": "electron .",
-        "prebuild": "license-checker-rseidelsohn --production --out THIRD_PARTY_NOTICES.txt",
-        "build": "electron-builder"
+        "licenses": "license-checker-rseidelsohn --out THIRD_PARTY_NOTICES.txt",
+        "build": "npm run licenses && electron-builder"
     },
     "devDependencies": {
-        "electron": "^37.10.3",
+        "electron": "^43.3.0",
         "electron-builder": "^26.15.3",
         "license-checker-rseidelsohn": "^5.0.1"
     },
     "build": {
         "appId": "com.uuidtool.app",
         "productName": "UUID Tool",
-        "extraResources": [
-            {
-                "from": "THIRD_PARTY_NOTICES.txt",
-                "to": "THIRD_PARTY_NOTICES.txt"
-            }
-        ],
         "win": {
             "icon": "icon.ico",
             "target": [
@@ -35,8 +30,7 @@
         },
         "nsis": {
             "oneClick": false,
-            "allowToChangeInstallationDirectory": true,
-            "license": "THIRD_PARTY_NOTICES.txt"
+            "allowToChangeInstallationDirectory": true
         },
         "mac": {
             "icon": "icon.icns",
@@ -49,8 +43,7 @@
                     ]
                 }
             ],
-            "category": "public.app-category.utilities",
-            "license": "THIRD_PARTY_NOTICES.txt"
+            "category": "public.app-category.utilities"
         },
         "linux": {
             "icon": "icons",

@@ -23,6 +23,8 @@ html, body {
     width: 10px;
     height: 10px;
     padding: 10px;
+    border: 2px solid #80000000;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -31,9 +33,10 @@ html, body {
     top: 20px;
     color: #ffffff;
     background-color: #00000000;
-    transition: background-color 0.2s ease;
+    transition: border 0.2s, background-color 0.2s;
 }
 .closeButton:hover {
+    border: 2px solid #800000;
     background-color: #ff0000;
 }
 .closeImage {
@@ -64,20 +67,38 @@ html, body {
     border-radius: 10px;
     background-color: #1f1f1f;
     color: #ffffff;
+    font-size: 12px;
     position: absolute;
     top: 150px;
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
 }
+.uuid-anim {
+    animation: uuid ease-out 1s;
+}
+@keyframes uuid {
+    from {
+        background-color: #ffffff;
+    }
+    to {
+        background-color: #000000;
+    }
+}
 #generate {
     width: 200px;
     height: 30px;
+    font-size: 12px;
+    font-weight: bold;
     border-radius: 10px;
     position: absolute;
     bottom: 100px;
     background-color: #808080;
     color: #ffffff;
+    transition: background-color 0.5s;
     border: 2px solid #000000;
     box-shadow: 5px 5px 3px rgba(0, 0, 0, 0.5);
+}
+#generate:hover {
+    background-color: #404040;
 }
